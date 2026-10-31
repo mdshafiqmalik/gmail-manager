@@ -1,13 +1,35 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy | Gmail Manager</title><link rel="stylesheet" href="style.css"></head><body><nav class="nav"><div class="container navin">
-<a class="brand" href="index.html">✉ Gmail Manager</a>
-<div class="links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-</div></nav><main class="container page">
-<h1>Privacy Policy</h1><p><strong>Last updated: October 31, 2026</strong></p>
-<p>Gmail Manager is designed to help you manage your own Gmail account.</p>
-<h2>Information we access</h2><p>When you authorize Gmail Manager, the application may access Gmail data required for features you choose to use, such as reading message metadata, searching messages, and moving selected messages to Trash.</p>
-<h2>How your data is used</h2><p>Your Gmail data is used only to provide the application's requested mailbox-management features. Gmail Manager does not sell your Gmail data.</p>
-<h2>Data storage</h2><p>If you run the application locally, authorization credentials and tokens may be stored on your device. Keep these files private and do not share them publicly.</p>
-<h2>Third-party services</h2><p>Gmail Manager uses Google services and the Gmail API. Your use of those services is also subject to Google's applicable terms and policies.</p>
-<h2>Your control</h2><p>You can revoke the application's Google account access at any time through your Google Account security settings.</p>
-<h2>Contact</h2><p>For questions about this policy, contact the developer through the project's GitHub repository.</p>
-</main><footer class="footer"><div class="container footerin"><span>© 2026 Gmail Manager. All rights reserved.</span><span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></span></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Privacy policy for Gmail Manager."><title>Privacy Policy · Gmail Manager</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <main class="policy-wrap">
+    <a class="policy-brand" href="index.html">✉ Gmail Manager</a>
+    <article class="policy-card">
+      <p class="policy-kicker">LEGAL</p><h1>Privacy Policy</h1><p class="policy-date">Last updated: October 31, 2026</p>
+      <p>This Privacy Policy explains how Gmail Manager (“the app”) handles information when you use this browser-based Gmail management website.</p>
+      <h2>1. Who operates the app</h2>
+      <p>App operator/developer: <strong>[REPLACE WITH YOUR NAME OR ORGANIZATION]</strong>. Contact: <strong>[REPLACE WITH A MONITORED CONTACT EMAIL]</strong>. Replace these placeholders before publishing or submitting the app for Google OAuth verification.</p>
+      <h2>2. Google account authorization</h2>
+      <p>When you choose to connect a Google account, the app uses Google Identity Services to obtain an OAuth access token and calls the Gmail API. The app requests the scope <code>https://www.googleapis.com/auth/gmail.modify</code>, which allows the app to read and modify messages and send email on your behalf. You can decline authorization or revoke access at any time.</p>
+      <h2>3. Gmail information the app accesses</h2>
+      <p>Depending on the features you use, the app can access message IDs, sender and recipient headers, subject and date headers, message snippets and text content, message labels, mailbox profile counts, and attachment data that you choose to download. It may also create labels, change message labels, move messages to Trash, and send messages when you request those actions.</p>
+      <h2>4. How information is used</h2>
+      <p>Gmail information is used only to provide the mailbox features you choose, such as displaying messages, running Gmail searches, calculating sender counts, exporting a sender list at your request, managing labels, and carrying out message actions. Sender analysis is calculated locally in your browser.</p>
+      <h2>5. Storage and disclosure</h2>
+      <p>This version is a static, client-side website. It does not include an application backend or database. The OAuth access token is held in browser memory while the page is open and is not intentionally stored by this app in local storage, cookies, or an app server. The OAuth Client ID may be saved in your browser's local storage for convenience. Message content and sender statistics are handled in the browser and are not uploaded to an app-operated server by this code.</p>
+      <p>The site is distributed through a static hosting provider, which may process ordinary website request and security logs. Google processes authentication and Gmail API requests under Google's own policies. The app does not sell Gmail data, use it for advertising, or use it to train generalized AI or machine-learning models.</p>
+      <h2>6. Downloads and actions</h2>
+      <p>Sender CSV files and attachments are downloaded to your device only when you choose to export or download them. Email actions such as archiving, labeling, marking read/unread, reporting spam, moving messages to Trash, and sending messages are performed only after you initiate the action. Bulk cleanup requires a separate confirmation.</p>
+      <h2>7. Retention and control</h2>
+      <p>Reloading or closing the page clears the in-memory access token and data held by the app. You can use Settings to disconnect or revoke Google access. You can also review or revoke third-party access in your Google Account security settings. Data already present in your Gmail account remains subject to your Gmail settings and Google's retention practices.</p>
+      <h2>8. Children's privacy</h2>
+      <p>The app is not designed for children under the age required to independently authorize a Google account in their jurisdiction. It does not knowingly collect personal information from children.</p>
+      <h2>9. Changes to this policy</h2>
+      <p>This policy may be updated when app functionality or data handling changes. The updated date above will be changed when revisions are published.</p>
+      <h2>10. Contact</h2>
+      <p>Privacy questions or requests: <strong>[REPLACE WITH A MONITORED CONTACT EMAIL]</strong>.</p>
+      <p class="policy-back"><a href="index.html">← Back to Gmail Manager</a></p>
+    </article>
+    <p class="policy-footer">Gmail Manager is an independent project and is not affiliated with Google.</p>
+  </main>
+</body></html>
