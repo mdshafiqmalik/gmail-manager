@@ -194,10 +194,30 @@
     return /(?:^|\s)in:(?:spam|trash|anywhere)(?:\s|$)/i.test(query || '');
   }
 
+  // Gmail search does not support conventional '*' wildcards in email addresses.
+  // Accept friendly sender-domain patterns such as *@linkedin.com and translate
+  // them into Gmail's supported sender search operator (from:linkedin.com).
+  // Both bare patterns and explicit from:*@domain patterns are supported.
+  function normalizeSearchQuery(query = '') {
+    let normalized = String(query);
+
+    normalized = normalized.replace(
+      /\bfrom:\s*\*\s*@\s*([a-z0-9.-]+\.[a-z]{2,})/gi,
+      (_, domain) => `from:${domain.toLowerCase()}`
+    );
+
+    normalized = normalized.replace(
+      /(^|[\s{(])\*\s*@\s*([a-z0-9.-]+\.[a-z]{2,})/gi,
+      (_, prefix, domain) => `${prefix}from:${domain.toLowerCase()}`
+    );
+
+    return normalized;
+  }
+
   async function listMessages(query, pageToken = null, maxResults = 50) {
     const params = new URLSearchParams();
     params.set('maxResults', String(Math.min(500, Math.max(1, maxResults))));
-    if (query) params.set('q', query);
+    if (query) params.set('q', normalizeSearchQuery(query));
     if (pageToken) params.set('pageToken', pageToken);
     if (shouldIncludeSpamTrash(query)) params.set('includeSpamTrash', 'true');
     return api(`/messages?${params.toString()}`);

@@ -7,6 +7,7 @@ A browser-only Gmail management interface. It can be hosted as a static website 
 - Google OAuth connection using a **Web application OAuth Client ID**.
 - Inbox, sent, drafts, starred, promotions, social, unread, spam and trash views.
 - Gmail search syntax, quick filters, adjustable page size and pagination.
+- Sender-domain wildcard shortcut: `*@linkedin.com` or `from:*@linkedin.com` is translated into Gmail sender search; combine it with filters such as `older_than:1y`.
 - Read message details as text, view message headers and download message attachments.
 - Sender analysis (scan up to 10,000 messages per run), ranked sender list and CSV export.
 - Bulk archive, mark read/unread, star/unstar, report spam, move to Trash and restore from Trash.
@@ -80,6 +81,17 @@ Open [http://localhost:8000](http://localhost:8000). Add `http://localhost:8000`
 5. Under Build and deployment, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
 6. Wait for GitHub Pages to publish the site. Add the resulting origin (for example `https://YOUR-USERNAME.github.io`) to the OAuth client's Authorized JavaScript origins.
 7. Set the homepage, privacy policy and terms URLs in the Google OAuth consent configuration.
+
+## Sender-domain wildcard search
+
+The search box accepts a convenience pattern such as `*@linkedin.com` or `from:*@linkedin.com`. The app converts it to Gmail's supported `from:linkedin.com` query before calling the Gmail API. You can combine it with normal Gmail operators, for example:
+
+```text
+*@linkedin.com older_than:1y
+from:*@linkedin.com category:updates
+```
+
+Gmail's search language does not implement general-purpose `*` wildcards. This app supports the sender-domain shortcut only; Gmail evaluates the resulting `from:domain` query using its own sender search behavior.
 
 ## Security and data handling
 

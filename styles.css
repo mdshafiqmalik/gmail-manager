@@ -8,3 +8,6 @@
 .policy-wrap{max-width:900px;margin:45px auto;padding:0 20px}.policy-brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:800 17px Manrope,sans-serif;color:#27354e;margin:0 0 18px}.policy-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,52px);box-shadow:var(--shadow)}.policy-kicker{font-size:9px;letter-spacing:1.5px;color:#6482c2;font-weight:800}.policy-card h1{font:800 clamp(29px,4vw,40px) Manrope,sans-serif;letter-spacing:-1.2px;margin:8px 0}.policy-date{font-size:10px;color:#9aa4b4;margin-bottom:28px}.policy-card h2{font:800 14px Manrope,sans-serif;margin:26px 0 7px}.policy-card p{font-size:12px;line-height:1.8;color:#627087}.policy-card code{font-size:10px;background:#f2f5fb;padding:3px 5px;border-radius:4px;overflow-wrap:anywhere}.policy-back{margin-top:35px}.policy-back a{color:#356ce5;text-decoration:none;font-weight:700}.policy-footer{text-align:center;font-size:9px;color:#9aa4b4;margin:18px 0}
 
 .danger-text{color:#c44f55!important}.danger-text:hover{color:#a93239!important}
+
+
+.search-hint{margin:10px 2px 0;color:#667085;font-size:12px;line-height:1.55}.search-hint code{display:inline-block;padding:1px 5px;border:1px solid #e5eaf2;border-radius:5px;background:#f7f9fc;color:#344054;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px}
